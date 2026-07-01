@@ -1,0 +1,5 @@
+dataset,experiment,optimizer,optimizer_type,lr,momentum,weight_decay,best_test_acc,best_epoch,final_test_acc,final_train_acc,final_train_loss,final_test_loss,convergence_speed
+FashionMNIST,main,SGD,SGD,0.05,0.9,0.0005,92.54,10,92.54,94.91000000000001,0.14354251266320547,0.21511379405260087,第3轮达到90.0%测试准确率
+FashionMNIST,main,Adam,Adam,0.001,0.0,0.0,92.01,10,92.01,93.82833333333333,0.17007367118199665,0.22705409269332885,第4轮达到90.0%测试准确率
+FashionMNIST,main,AdamW,AdamW,0.001,0.0,0.01,91.97999999999999,10,91.97999999999999,93.88833333333334,0.1704452169895172,0.22537629342079163,第4轮达到90.0%测试准确率
+FashionMNIST,ablation,AdamW_no_wd,AdamW,0.001,0.0,0.0,92.01,10,92.01,93.82833333333333,0.17007367118199665,0.22705409269332885,第4轮达到90.0%测试准确率

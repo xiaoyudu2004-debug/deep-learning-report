@@ -1,0 +1,18 @@
+{
+  "dataset": "FashionMNIST",
+  "train_samples": 60000,
+  "test_samples": 10000,
+  "device": "cuda",
+  "cuda_device": "NVIDIA GeForce RTX 4090",
+  "python_version": "3.12.4",
+  "torch_version": "2.6.0+cu124",
+  "torchvision_version": "0.21.0+cu124",
+  "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+  "epochs": 10,
+  "batch_size": 128,
+  "seed": 42,
+  "scheduler": "CosineAnnealingLR",
+  "eta_min": 1e-05,
+  "target_acc": 90.0,
+  "total_seconds": 133.5236554145813
+}

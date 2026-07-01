@@ -1,0 +1,75 @@
+Deep Learning Optimizer Comparison
+Dataset: FashionMNIST
+Train samples: 60000
+Test samples: 10000
+Device: cuda
+CUDA device: NVIDIA GeForce RTX 4090
+Python: 3.12.4
+PyTorch: 2.6.0+cu124
+Torchvision: torchvision
+Platform: Linux-5.15.0-139-generic-x86_64-with-glibc2.31
+Epochs: 10
+Batch size: 128
+Seed: 42
+
+Experiment SGD: optimizer=SGD, lr=0.05, momentum=0.9, weight_decay=0.0005, scheduler=CosineAnnealingLR
+SGD          | Epoch 01/10 | train_loss=0.5534 | train_acc=79.80% | test_loss=0.3488 | test_acc=87.20% | time=3.4s
+SGD          | Epoch 02/10 | train_loss=0.3362 | train_acc=87.79% | test_loss=0.3197 | test_acc=88.37% | time=2.9s
+SGD          | Epoch 03/10 | train_loss=0.2852 | train_acc=89.84% | test_loss=0.2725 | test_acc=90.11% | time=3.0s
+SGD          | Epoch 04/10 | train_loss=0.2538 | train_acc=90.74% | test_loss=0.2579 | test_acc=90.89% | time=2.8s
+SGD          | Epoch 05/10 | train_loss=0.2283 | train_acc=91.72% | test_loss=0.2435 | test_acc=91.21% | time=2.8s
+SGD          | Epoch 06/10 | train_loss=0.2049 | train_acc=92.58% | test_loss=0.2314 | test_acc=91.43% | time=2.7s
+SGD          | Epoch 07/10 | train_loss=0.1842 | train_acc=93.29% | test_loss=0.2266 | test_acc=92.05% | time=3.0s
+SGD          | Epoch 08/10 | train_loss=0.1679 | train_acc=93.97% | test_loss=0.2217 | test_acc=92.01% | time=3.0s
+SGD          | Epoch 09/10 | train_loss=0.1528 | train_acc=94.53% | test_loss=0.2154 | test_acc=92.46% | time=3.1s
+SGD          | Epoch 10/10 | train_loss=0.1435 | train_acc=94.91% | test_loss=0.2151 | test_acc=92.54% | time=3.1s
+
+Experiment Adam: optimizer=Adam, lr=0.001, momentum=0.0, weight_decay=0.0, scheduler=CosineAnnealingLR
+Adam         | Epoch 01/10 | train_loss=0.5395 | train_acc=80.52% | test_loss=0.3568 | test_acc=86.95% | time=3.4s
+Adam         | Epoch 02/10 | train_loss=0.3460 | train_acc=87.49% | test_loss=0.3161 | test_acc=88.66% | time=3.2s
+Adam         | Epoch 03/10 | train_loss=0.2956 | train_acc=89.33% | test_loss=0.2845 | test_acc=89.46% | time=3.0s
+Adam         | Epoch 04/10 | train_loss=0.2633 | train_acc=90.48% | test_loss=0.2724 | test_acc=90.24% | time=3.0s
+Adam         | Epoch 05/10 | train_loss=0.2396 | train_acc=91.37% | test_loss=0.2592 | test_acc=90.49% | time=3.0s
+Adam         | Epoch 06/10 | train_loss=0.2187 | train_acc=91.98% | test_loss=0.2427 | test_acc=91.28% | time=3.0s
+Adam         | Epoch 07/10 | train_loss=0.2005 | train_acc=92.73% | test_loss=0.2355 | test_acc=91.50% | time=3.0s
+Adam         | Epoch 08/10 | train_loss=0.1869 | train_acc=93.21% | test_loss=0.2319 | test_acc=91.74% | time=3.0s
+Adam         | Epoch 09/10 | train_loss=0.1768 | train_acc=93.66% | test_loss=0.2264 | test_acc=91.93% | time=2.8s
+Adam         | Epoch 10/10 | train_loss=0.1701 | train_acc=93.83% | test_loss=0.2271 | test_acc=92.01% | time=2.8s
+
+Experiment AdamW: optimizer=AdamW, lr=0.001, momentum=0.0, weight_decay=0.01, scheduler=CosineAnnealingLR
+AdamW        | Epoch 01/10 | train_loss=0.5389 | train_acc=80.58% | test_loss=0.3580 | test_acc=87.07% | time=3.2s
+AdamW        | Epoch 02/10 | train_loss=0.3456 | train_acc=87.55% | test_loss=0.3127 | test_acc=88.67% | time=2.9s
+AdamW        | Epoch 03/10 | train_loss=0.2952 | train_acc=89.42% | test_loss=0.2813 | test_acc=89.67% | time=3.0s
+AdamW        | Epoch 04/10 | train_loss=0.2623 | train_acc=90.40% | test_loss=0.2729 | test_acc=90.24% | time=3.1s
+AdamW        | Epoch 05/10 | train_loss=0.2391 | train_acc=91.30% | test_loss=0.2517 | test_acc=90.78% | time=3.0s
+AdamW        | Epoch 06/10 | train_loss=0.2187 | train_acc=92.01% | test_loss=0.2411 | test_acc=91.19% | time=2.9s
+AdamW        | Epoch 07/10 | train_loss=0.2004 | train_acc=92.75% | test_loss=0.2349 | test_acc=91.56% | time=2.9s
+AdamW        | Epoch 08/10 | train_loss=0.1867 | train_acc=93.23% | test_loss=0.2291 | test_acc=91.73% | time=2.9s
+AdamW        | Epoch 09/10 | train_loss=0.1765 | train_acc=93.65% | test_loss=0.2248 | test_acc=91.87% | time=3.0s
+AdamW        | Epoch 10/10 | train_loss=0.1704 | train_acc=93.89% | test_loss=0.2254 | test_acc=91.98% | time=3.0s
+
+Experiment AdamW_no_wd: optimizer=AdamW, lr=0.001, momentum=0.0, weight_decay=0.0, scheduler=CosineAnnealingLR
+AdamW_no_wd  | Epoch 01/10 | train_loss=0.5395 | train_acc=80.52% | test_loss=0.3568 | test_acc=86.95% | time=3.2s
+AdamW_no_wd  | Epoch 02/10 | train_loss=0.3460 | train_acc=87.49% | test_loss=0.3161 | test_acc=88.66% | time=3.0s
+AdamW_no_wd  | Epoch 03/10 | train_loss=0.2956 | train_acc=89.33% | test_loss=0.2845 | test_acc=89.46% | time=3.1s
+AdamW_no_wd  | Epoch 04/10 | train_loss=0.2633 | train_acc=90.48% | test_loss=0.2724 | test_acc=90.24% | time=3.0s
+AdamW_no_wd  | Epoch 05/10 | train_loss=0.2396 | train_acc=91.37% | test_loss=0.2592 | test_acc=90.49% | time=3.0s
+AdamW_no_wd  | Epoch 06/10 | train_loss=0.2187 | train_acc=91.98% | test_loss=0.2427 | test_acc=91.28% | time=3.0s
+AdamW_no_wd  | Epoch 07/10 | train_loss=0.2005 | train_acc=92.73% | test_loss=0.2355 | test_acc=91.50% | time=3.0s
+AdamW_no_wd  | Epoch 08/10 | train_loss=0.1869 | train_acc=93.21% | test_loss=0.2319 | test_acc=91.74% | time=3.0s
+AdamW_no_wd  | Epoch 09/10 | train_loss=0.1768 | train_acc=93.66% | test_loss=0.2264 | test_acc=91.93% | time=3.0s
+AdamW_no_wd  | Epoch 10/10 | train_loss=0.1701 | train_acc=93.83% | test_loss=0.2271 | test_acc=92.01% | time=3.0s
+
+Final results:
+     dataset experiment   optimizer optimizer_type     lr  momentum  weight_decay  best_test_acc  best_epoch  final_test_acc  final_train_acc  final_train_loss  final_test_loss convergence_speed
+FashionMNIST       main         SGD            SGD 0.0500    0.9000        0.0005        92.5400          10         92.5400          94.9100            0.1435           0.2151   第3轮达到90.0%测试准确率
+FashionMNIST       main        Adam           Adam 0.0010    0.0000        0.0000        92.0100          10         92.0100          93.8283            0.1701           0.2271   第4轮达到90.0%测试准确率
+FashionMNIST       main       AdamW          AdamW 0.0010    0.0000        0.0100        91.9800          10         91.9800          93.8883            0.1704           0.2254   第4轮达到90.0%测试准确率
+FashionMNIST   ablation AdamW_no_wd          AdamW 0.0010    0.0000        0.0000        92.0100          10         92.0100          93.8283            0.1701           0.2271   第4轮达到90.0%测试准确率
+
+Saved metrics: /home/ncc550/dxy/深度学习/deep_learning_optimizer_report/results/metrics.csv
+Saved final results: /home/ncc550/dxy/深度学习/deep_learning_optimizer_report/results/final_results.csv
+Saved loss curve: /home/ncc550/dxy/深度学习/deep_learning_optimizer_report/results/loss_curve.png
+Saved accuracy curve: /home/ncc550/dxy/深度学习/deep_learning_optimizer_report/results/accuracy_curve.png
+Saved AdamW ablation curve: /home/ncc550/dxy/深度学习/deep_learning_optimizer_report/results/adamw_weight_decay_ablation.png
+Total elapsed seconds: 133.5
